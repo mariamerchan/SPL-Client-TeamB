@@ -1,8 +1,9 @@
 /* Inicio Nabvar */
 
 .navbar-custom {
-  background-color: #165c66;
-  height: 110px;
+  background-color: #003361;
+  height: 85px;
+  padding: 0 10px;
 }
 
 .navbar-brand {
@@ -34,15 +35,3 @@
 }
 
 /* Fin Nabvar */
-
-/* Inicio page ofrecimientos */
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-}
-
-/* Fin page ofrecimientos */

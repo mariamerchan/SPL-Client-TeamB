@@ -1,0 +1,128 @@
+.strong {
+  font-weight: bold;
+  padding-top: 10px;
+}
+.crud {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.crud > h1 {
+  margin: 20px 0;
+}
+
+.crud .btn {
+  font-weight: 600;
+}
+
+.crud .btn:focus-visible .btn:active {
+  box-shadow: none;
+  border: none;
+}
+
+.btn-close {
+  filter: invert(1);
+  opacity: 1;
+}
+.crud .create-btn {
+  background-color: #0f96e1;
+  color: #fff;
+}
+
+.crud .create-btn:hover {
+  background-color: #0f96e1;
+  border: none;
+  transform: none;
+  transition: none;
+  color: #fff;
+}
+
+.crud .update-btn {
+  background-color: #e6fbf2;
+  color: #66ac87;
+  border-color: #66ac87;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 100px;
+  margin-right: 5px;
+}
+
+.crud .update-btn:hover {
+  background-color: #e6fbf2;
+  color: #66ac87;
+}
+
+.crud .delete-btn {
+  background-color: #fce6e6;
+  color: #e94b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 100px;
+}
+
+.crud .delete-btn:hover {
+  background-color: #fce6e6;
+  color: #e94b4b;
+}
+.table-responsive {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  p,
+  a,
+  td {
+    font-size: 12px;
+    text-wrap: wrap;
+  }
+
+  .crud {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .table thead {
+    display: none;
+  }
+
+  .table tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    text-wrap: wrap;
+    flex: 1;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    box-sizing: border-box;
+    flex: 0 0 30%;
+    padding-right: 10px;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,30 +1,13 @@
-import { useState, useEffect } from "react";
+import { useObtenerOfrecimientos } from "../hooks/useOfrecimientos";
 
 export const OfrecimientosPage = () => {
-  const [ofrecimientos, setOfrecimientos] = useState([]);
-
-  useEffect(() => {
-    const obtenerOfrecimientos = async () => {
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_APP_SERVER_URL}api/obtener-ofrecimientos`
-        );
-        const data = await response.json();
-        setOfrecimientos(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    obtenerOfrecimientos();
-  }, []);
+  const { ofrecimientos } = useObtenerOfrecimientos();
   return (
     <div className="container my-8">
-      <h1>Ofrecer App SPL</h1>
-      <h2>¿Qué tenemos para ofrecer?</h2>
-      {/* Nombre del team */}
-      <h2>Team B</h2>
-      <div className="row row-container mt-9">
+      <h1 className="text-center">Ofrecer App SPL</h1>
+      <h2 className="text-center mb-4">¿Qué tenemos para ofrecer?</h2>
+      <h2 className="text-center mb-5">Team B</h2>
+      <div className="row row-container mt-9 offers">
         {ofrecimientos.map((ofrecimiento) => (
           <div
             key={ofrecimiento.id}
